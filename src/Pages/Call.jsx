@@ -7,9 +7,9 @@ import Navbar from "../components/Navbar"
 const Call = () => {
   return (
     <div>
-      {/* <Navbar/> */}
-      {/* <Contact/>
-      <Message/> */}
+      <Navbar/>
+      <Contact/>
+      <Message/>
       <MapContainer/>
     </div>
   )

@@ -7,7 +7,7 @@ import Location_1 from "../assets/projects/Location_1.png"
 const Message = () => {
   return (
     <div
-      className="relative h-210 mb-2 bg-cover bg-center md:p-20 xl:p-18 lg:p-20 p-0"
+      className="relative  mb-2 bg-cover bg-center md:p-10 xl:px-18 lg:p-20 p-0"
       style={{ backgroundImage: `url(${Rectangle_2517})` }}
     >
       <div className="container mx-auto p-0 md:p-6 lg:p-8 flex flex-wrap justify-start">
