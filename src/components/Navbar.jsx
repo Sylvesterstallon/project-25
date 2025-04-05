@@ -3,6 +3,7 @@ import Arrow_05 from "../../src/assets/projects/Arrow_05.png";
 import hambuger_icon from "../assets/projects/hambuger_icon.jpg";
 import cross_icon from "../assets/projects/cross_icon.png";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 
 const Navbar = () => {
@@ -88,24 +89,54 @@ useEffect(() =>{
           <img onClick={()=> setShowMobileMenu(false)} className="w-4" src={cross_icon} alt="cross-icon-img" />
         </div>
         <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
-          <a href="/" className="px-4 py-2 rounded-full inline-block">
+          <motion.a
+         initial={{opacity: 0, x:200}}
+         transition={{duration: 4}}
+         whileInView={{opacity: 1, x:0}}
+         viewport={{once: true}}
+          href="/" className="px-4 py-2 rounded-full inline-block">
             Home
-          </a>
-          <a href="/distinct" className="px-4 py-2 rounded-full inline-block">
+          </motion.a>
+          <motion.a
+           initial={{opacity: 0, x:-200}}
+           transition={{duration: 2}}
+           whileInView={{opacity: 1, x:0}}
+           viewport={{once: true}}
+          href="/distinct" className="px-4 py-2 rounded-full inline-block">
             Destinations
-          </a>
-          <a href="/about" className="px-4 py-2 rounded-full inline-block">
+          </motion.a>
+          <motion.a
+           initial={{opacity: 0, x:200}}
+           transition={{duration: 1}}
+           whileInView={{opacity: 1, x:0}}
+           viewport={{once: true}}
+          href="/about" className="px-4 py-2 rounded-full inline-block">
             About Us
-          </a>
-          <a href="" className="px-4 py-2 rounded-full inline-block">
+          </motion.a>
+          <motion.a
+           initial={{opacity: 0, x:-200}}
+           transition={{duration: 1.5}}
+           whileInView={{opacity: 1, x:0}}
+           viewport={{once: true}}
+          href="" className="px-4 py-2 rounded-full inline-block">
             Tourism-Establishments
-          </a>
-          <a href="/call" className="px-4 py-2 rounded-full inline-block">
+          </motion.a>
+          <motion.a
+          initial={{opacity: 0, x:200}}
+          transition={{duration: 1}}
+          whileInView={{opacity: 1, x:0}}
+          viewport={{once: true}}
+           href="/call" className="px-4 py-2 rounded-full inline-block">
             Contact
-          </a>
-          <a href="/article" className="px-4 py-2 rounded-full inline-block">
+          </motion.a>
+          <motion.a
+          initial={{opacity: 0, x:-200}}
+          transition={{duration: 2.5}}
+          whileInView={{opacity: 1, x:0}}
+          viewport={{once: true}}
+          href="/article" className="px-4 py-2 rounded-full inline-block">
             Blog
-          </a>
+          </motion.a>
         </ul>
       </div>
     </div>

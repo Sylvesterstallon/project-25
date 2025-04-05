@@ -4,6 +4,7 @@ import vert_bar from "../assets/projects/vert_bar.png";
 import Substract from "../assets/projects/Subtract.png";
 import Substract_2 from "../assets/projects/Subtract_2.png";
 import Nav from "./Nav";
+import { motion } from "framer-motion";
 
 const Ultimate = () => {
   return (
@@ -17,7 +18,12 @@ const Ultimate = () => {
         <img src={vert_bar} alt="line-img" className="w-4" />
       </div>
 
-      <div className="container w-full text-left px-4 md:px-30 mt-10 md:mt-20 ml-10">
+      <motion.div
+       initial={{opacity: 0, y:100}}
+       transition={{duration: 1.5}}
+       whileInView={{opacity: 1, y:0}}
+       viewport={{once: true}}
+      className="container w-full text-left px-4 md:px-30 mt-10 md:mt-20 ml-10">
         <h2 className=" text-[-40px] text-white leading-10 md:text-5xl md:font-normal font-bold mb-2">
           EXPLORE ABIA
         </h2>
@@ -34,8 +40,13 @@ const Ultimate = () => {
             <FaArrowRightLong className="w-10 mt-1" />{" "}
           </button>
         </div>
-      </div>
-      <div className="flex flex-row bottom-0 left-1/2 transform -translate-x-1/2 justify-center absolute">
+      </motion.div>
+      <motion.div
+      
+      initial={{opacity: 0, x:100}}
+      transition={{duration: 1.5}}
+      whileInView={{opacity: 1, x:0}}
+      viewport={{once: true}}className="flex flex-row bottom-0 left-1/2 transform -translate-x-1/2 justify-center absolute">
           <div className="flex justify-center items-center">
           <img src={Substract} alt="substract-img"  className="" />
         <p className="absolute font-semibold md:text-base text-sm text-regal-ex-abia underline">Tour</p>
@@ -44,7 +55,7 @@ const Ultimate = () => {
         <img src={Substract_2} alt="substract-img2" className=""/>
         <p className="absolute font-semibold md:text-base text-sm text-white">Hotels</p>
         </div>
-        </div>
+        </motion.div>
     </div>
   );
 };

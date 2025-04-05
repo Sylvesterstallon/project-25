@@ -4,10 +4,15 @@ import Rectangle_2519 from "../assets/projects/Rectangle_2519.png";
 import Rectangle_2516 from "../assets/projects/Rectangle_2516.png";
 import Rectangle_2584 from "../assets/projects/Rectangle_2584.png";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Hotels = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x: 100}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative min-h-200  bg-cover bg-center items-center w-full overflow-hidden"
       style={{ backgroundImage: `url(${Rectangle_2508})` }}
     >
@@ -148,7 +153,7 @@ const Hotels = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { places } from "../assets/assets";
 import Frame_left from "../assets/projects/Frame_left.png";
 import Frame_right from "../assets/projects/Frame_right.png";
+import { motion } from "framer-motion";
 
 const Places = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,7 +32,12 @@ const Places = () => {
   };
 
   return (
-    <div className="container mx-auto py-4 px-6 pt-10 md:px-20 lg:px-32 my-20 w-full overflow-hidden">
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+      transition={{duration: 1.5}}
+      whileInView={{opacity: 1, x:0}}
+      viewport={{once: true}}
+    className="container mx-auto py-4 px-6 pt-10 md:px-20 lg:px-32 my-20 w-full overflow-hidden">
       <h1 className="font-secondary font-bold text-[38px] sm:text-4xl leading-11 text-center">
         Best Destinations For Tour
       </h1>
@@ -72,7 +78,7 @@ const Places = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

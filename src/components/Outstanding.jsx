@@ -6,10 +6,15 @@ import tour_guide from "../assets/projects/tour_guide.png";
 import travelling_1 from "../assets/projects/travelling_1.png";
 import hands_1 from "../assets/projects/hands_1.png";
 import medical_team from "../assets/projects/medical_team.png";
+import { motion } from "framer-motion";
 
 const Outstanding = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1.5}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative md:min-h-300 min-h-700 bg-cover bg-center items-center w-full overflow-hidden"
       style={{ backgroundImage: `url(${Rectangle_7516})` }}
     >
@@ -112,7 +117,7 @@ const Outstanding = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

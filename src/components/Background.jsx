@@ -1,11 +1,17 @@
 import Union from "../assets/projects/Union.png"
 import Temple from "../assets/projects/temple.png"
+import { motion } from "framer-motion";
 
 
 
 const Background = () => {
   return (
-    <div className="flex flex-wrap md:flex-nowrap justify-center mb-18">
+    <motion.div
+    initial={{opacity: 0, x:200}}
+      transition={{duration: 1}}
+      whileInView={{opacity: 1, x:0}}
+      viewport={{once: true}}
+    className="flex flex-wrap md:flex-nowrap justify-center mb-18">
       <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 p-4 md:p-8 lg:p-12 xl:p-12 md:mt-8">
         <h1 className="text-black font-bold text-[38px] md:text-3xl lg:text-4xl xl:text-5xl leading-11">Our Background</h1>
         <p className="font-normal md:text-xl text-lg lg:text-2xl  leading-8 text-regal-light-black font-default md:mt-10">
@@ -39,7 +45,7 @@ const Background = () => {
         </div> 
       
       
-    </div>
+    </motion.div>
     
   );
 };

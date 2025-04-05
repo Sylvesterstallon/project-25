@@ -1,11 +1,16 @@
 import testimonials from "../assets/projects/testimonials.png";
 // import Rectangle_2509 from "../assets/projects/Rectangle_2509.png";
 import Rectangle_2511 from "../assets/projects/Rectangle_2511.png";
-import Sylvera_001 from "../assets/projects/sylvesterstallone.jpg"
+import Sylvera_001 from "../assets/projects/sylvesterstallone.jpg";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative min-h-screen bg-cover bg-center items-center w-full overflow-hidden"
       style={{ backgroundImage: `url(${testimonials})` }}
     >
@@ -49,7 +54,7 @@ const Testimonials = () => {
             <div className="">
               <div className="flex flex-row items-center">
                 <div>
-                <img src={Rectangle_2511} alt="" />
+                  <img src={Rectangle_2511} alt="" />
                 </div>
                 <div>
                   <span className="font-bold text-base leading-6 text-regal-second">
@@ -76,7 +81,7 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,10 +7,17 @@ import OPTIONS from "../assets/projects/OPTIONS.png";
 import image_27 from "../assets/projects/image_27.png";
 import Rectangle_20 from "../assets/projects/Rectangle_20.png";
 import Group from "../assets/projects/Group.png";
+import { motion } from "framer-motion";
 
 const Bst = () => {
   return (
-    <div className="flex flex-wrap justify-between md:p-22 md:-mt-60  mt-2 p-8">
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+    
+    className="flex flex-wrap justify-between md:p-22 md:-mt-60  mt-2 p-8">
       <div>
         <div className="md:max-w-120 max-w-full">
           <h3 className="font-bold text-lg text-regal-white font-colledge">
@@ -102,7 +109,7 @@ const Bst = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -4,9 +4,14 @@ import Rectangle_2299 from "../assets/projects/Rectangle_2299.png";
 import Rectangle_2510 from "../assets/projects/Rectangle_2510.png";
 import Rectangle_2515 from "../assets/projects/Rectangle_2515.png";
 import Rectangle_2514 from "../assets/projects/Rectangle_2514.png";
+import { motion } from "framer-motion";
 const Vision = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x: 100}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative md:h-250 h-150  bg-cover bg-center items-center w-full overflow-hidden"
       style={{ backgroundImage: `url(${Rectangle_2508})` }}
     >
@@ -81,7 +86,7 @@ const Vision = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

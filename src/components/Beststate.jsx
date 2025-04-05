@@ -1,9 +1,15 @@
  import { FaArrowRightLong } from "react-icons/fa6";
 import Rectangle_2507 from "../assets/projects/Rectangle_2507.png";
+import { motion } from "framer-motion";
 
 const Beststate = () => {
   return (
-    <div className="container text-left justify-end mx-auto items-left px-2 md:px-20 lg:px-32 mt-5">
+    <motion.div
+    initial={{opacity: 0, x: 100}}
+    transition={{duration: 1.5}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+    className="container text-left justify-end mx-auto items-left px-2 md:px-20 lg:px-32 mt-5">
       <img src={Rectangle_2507} alt="" />
       <div className="transform md:translate-x-125 md:-translate-y-90 translate-x-55 -translate-y-53 text-right items-right md:max-w-110 max-w-56">
         <h1 className="font-bold md:text-4xl text-2xl leading-14 text-white">
@@ -23,7 +29,7 @@ const Beststate = () => {
             <FaArrowRightLong className="w-10 mt-1" />{" "}
           </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

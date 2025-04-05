@@ -1,9 +1,14 @@
 import Rectangle_19353 from "../assets/projects/Rectangle_19353.png";
 import Vector from "../assets/projects/Vector.png";
+import { motion } from "framer-motion";
 
 const Tour = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1.5}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative md:h-100 h-37 bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${Rectangle_19353})` }}
     >
@@ -17,7 +22,7 @@ const Tour = () => {
           className="md:w-15 xl:w-15 lg:w-15 w-12 absolute md:top-1/2 md:left-1/2 left-2/5 top-2/5 items-center"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

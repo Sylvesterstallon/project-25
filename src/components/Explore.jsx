@@ -1,9 +1,15 @@
 import Rectangle_19301 from "../assets/projects/Rectangle_19301.png";
 import Rectangle_19302 from "../assets/projects/Rectangle_19302.png";
+import { motion } from "framer-motion";
 
 const Explore = () => {
   return (
-    <div className="flex h-30 md:h-screen">
+    <motion.div 
+    initial={{opacity: 0, x: 100}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+    className="flex h-30 md:h-screen">
       <div className="w-1/2 h-full relative">
         <img className="w-full items-end" src={Rectangle_19301} alt="" />
         <div className="absolute md:top-1/5 sm:top-1/9 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/16 text-center">
@@ -26,7 +32,7 @@ const Explore = () => {
           </h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

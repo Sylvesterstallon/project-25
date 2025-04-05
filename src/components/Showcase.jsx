@@ -8,10 +8,16 @@ import image_27 from "../assets/projects/image_27.png";
 import Rectangle_20 from "../assets/projects/Rectangle_20.png";
 import Group from "../assets/projects/Group.png";
 import Rectangle_18 from "../assets/projects/Rectangle_18.png";
+import { motion } from "framer-motion";
 
 const Showcase = () => {
   return (
-    <div className="relative md:min-h-200 min-h-250 items-center w-full overflow-hidden bg-gray-100 ">
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+    className="relative md:min-h-200 min-h-250 items-center w-full overflow-hidden bg-gray-100 ">
       <div className="grid md:grid-cols-2 md:gap-16 items-center md:px-45 md:py-45 p-8 mt-10 md:mt-0">
         <div className="flex flex-col justify-start items-start text-left">
           <h1 className="md:font-bold font-semibold md:text-[50px] text-[40px] md:leading-14 leading-12 text-regal-light-navy-blue max-w-100">
@@ -111,7 +117,7 @@ const Showcase = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

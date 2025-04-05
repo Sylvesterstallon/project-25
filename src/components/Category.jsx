@@ -3,10 +3,15 @@
  import hands_1 from "../assets/projects/hands_1.png";
  import medical_team from "../assets/projects/medical_team.png";
 import Rectangle_7516 from "../assets/projects/Rectangle_7516.png"
+import { motion } from "framer-motion";
 
 const Category = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x:-200}}
+    transition={{duration: 1.5}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
       className="relative md:min-h-170 min-h-200 bg-cover bg-center items-center w-full overflow-hidden"
            style={{ backgroundImage: `url(${Rectangle_7516})` }}
     >
@@ -122,7 +127,7 @@ const Category = () => {
           </p>
         </div>
       </div> */}
-    </div>
+    </motion.div>
   );
 };
 

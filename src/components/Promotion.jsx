@@ -3,11 +3,17 @@ import Destination_2 from "../assets/projects/Destination_2.png"
 import Destination_3 from "../assets/projects/Destination_3.png"
 import Destination_4 from "../assets/projects/Destination_4.png"
 import Mask_grup from "../assets/projects/Mask_group.png"
+import { motion } from "framer-motion"
 
 
 const Promotion = () => {
   return (
-    <div className="m-h-screen p-1 ml-3 md:p-14  md:ml-15">
+    <motion.div
+    initial={{opacity: 0, x:200}}
+      transition={{duration: 1}}
+      whileInView={{opacity: 1, x:0}}
+      viewport={{once: true}}
+    className="m-h-screen p-1 ml-3 md:p-14  md:ml-15">
       <div className="">
         <h4 className="font-bold text-lg text-regal-white">PROMOTION</h4>
         <h2 className="font-teriary md:font-bold text-4xl w-fit leading-14 font-semibold md:text-5xl md:w-dvh text-regal-navy md:leading-16">
@@ -34,11 +40,11 @@ const Promotion = () => {
                                         <img className="w-52"  src={Destination_3} alt="destination-img3" />
                                        <p className="font-semibold text-regal-navy-blue text-lg"> National War Museum</p>
                     </div>
-                    <div>
+                    <div className="z-2 ">
                                         <img className="w-52" src={Destination_4} alt="destination-img4" />
                                        
                     </div>
-                    <div className="absolute ml-220 -mt-48">
+                    <div className=" z-1 absolute ml-220 -mt-48">
                     <img className="w-72 hidden md:block" src={Mask_grup} alt="mask-grup" />
                     </div>
                     
@@ -53,7 +59,7 @@ const Promotion = () => {
       </div>
      
       </div>
-    </div>
+    </motion.div>
   );
 };
 

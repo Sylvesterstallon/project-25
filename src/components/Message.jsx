@@ -3,10 +3,16 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import phone from "../assets/projects/phone.png";
 import Group_49 from "../assets/projects/Group_49.png"
 import Location_1 from "../assets/projects/Location_1.png"
+import { motion } from "framer-motion";
 
 const Message = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x:200}}
+    transition={{duration: 1}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+
       className="relative  mb-2 bg-cover bg-center md:p-10 xl:px-18 lg:p-20 p-0"
       style={{ backgroundImage: `url(${Rectangle_2517})` }}
     >
@@ -113,7 +119,7 @@ const Message = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

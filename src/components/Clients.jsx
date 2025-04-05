@@ -3,10 +3,16 @@ import Ellipse_624 from "../assets/projects/Ellipse_624.png";
 import Group_210 from "../assets/projects/Group_210.png"
 import Group_123 from "../assets/projects/Group_123.png"
 import Travel_Concepts from "../assets/projects/Travel_Concepts.png"
+import { motion } from "framer-motion";
 
 const Clients = () => {
   return (
-    <div
+    <motion.div
+    initial={{opacity: 0, x: 100}}
+    transition={{duration: 1.5}}
+    whileInView={{opacity: 1, x:0}}
+    viewport={{once: true}}
+
       className="bg-cover mb-4 min-h-screen bg-center items-center w-full -mt-20 overflow-hidden"
       style={{ backgroundImage: `url(${h1_background_img})` }}
     >
@@ -37,7 +43,7 @@ const Clients = () => {
         
       </div>
       <img className="md:-mt-50 mt-15" src={Travel_Concepts} alt="" />
-    </div>
+    </motion.div>
   );
 };
 
